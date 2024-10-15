@@ -6,16 +6,16 @@ Woori FIS Academy Tech Seminar Final
 
 ![TextGrad](./images/textgrad_logo.png)
 
-[Introduction to TextGrad, Code AI](https://youtu.be/Qks4UEsRwl0)
-[Github Repository](https://github.com/zou-group/textgrad)
-[HuggingFace](https://huggingface.co/TextGrad)
-[Paper](https://arxiv.org/abs/2406.07496)
+🎥 [Introduction to TextGrad, Code AI](https://youtu.be/Qks4UEsRwl0)
+👩‍💻 [Github Repository](https://github.com/zou-group/textgrad)
+🤗 [HuggingFace](https://huggingface.co/TextGrad)
+📑 [Paper](https://arxiv.org/abs/2406.07496)
 
 > Automatic "Differentiation" via Text
 
 TextGrad는 LLM에서 제공하는 텍스트 피드백을 통해, 역전파를 구현하여 텍스트 데이터에 대한 미분을 수행할 수 있습니다.
 
-## BackPropagation
+## ♻️ BackPropagation
 
 ![BackPropagation](./images/backpropagation-neurons.png)
 
@@ -70,7 +70,7 @@ LLM은 시스템의 개별 구성요소와 하위 작업에 대해 추론할 수
 
 ### 핵심 개념
 
-#### 텍스트 기반 자동 미분
+#### 텍스트 기반 자동 미분 📈
 
 - 기존의 수치 기반 자동 미분 개념을 텍스트 도메인으로 확장한 것입니다.
 - 계산 그래프의 각 노드는 텍스트 변수로 표현되며, 변수 간의 관계는 함수 호출로 정의됩니다.
@@ -121,7 +121,7 @@ TextGrad의 핵심 최적화기는 **Textual Gradient Descent(TGD)**
 
 이러한 구성 요소들이 유기적으로 작동하여 TextGrad의 최적화 프로세스를 구현합니다.
 
-### TextGrad, 활용 사례
+### TextGrad, 활용 사례 👀
 
 TextGrad는 다양한 도메인에서 그 효과성을 입증했습니다.
 
@@ -145,11 +145,11 @@ TextGrad는 다양한 도메인에서 그 효과성을 입증했습니다.
 
    - 목표 부위에 대한 적절한 선량과 부작용 감소를 동시에 달성했습니다.
 
-### 발표자료
+### 발표자료 📊
 
 [프레젠테이션 Link](./ppt/presentation.md)
 
-### Working Examples
+### Working Examples 🛠
 
 `./streamlit` 디렉토리에는 TextGrad를 활용한 예제들이 포함되어 있습니다.
 
