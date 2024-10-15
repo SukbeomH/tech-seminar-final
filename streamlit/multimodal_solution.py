@@ -59,11 +59,12 @@ st.title("Prompt Optimization with TextGrad")
 ## Add tabs for different methods
 multi_modal_tab, solution_optimization_tab = st.tabs(["MultiModal", "Solution Optimization"])
 
+
 ## MultiModal Tab
 with multi_modal_tab:
     ## Set the engine
-    engine = tg.get_engine("gpt-4o")
-    tg.set_backward_engine("gpt-4o", override=True)
+    engine = tg.get_engine("gpt-4o", override=True)
+    # engine = tg.set_backward_engine("gpt-4o", override=True)
     
     ## Add a title
     st.markdown("# MultiModal: 이미지 설명")
@@ -78,7 +79,7 @@ with multi_modal_tab:
         image_data = image.getvalue()
         image_variable = Variable(image_data, role_description="image to answer a question about", requires_grad=False)
         ## Display the image
-        st.image(image_data, use_column_width=True)
+        st.image(image_data, use_column_width=False)
 
     ## Add a button
     response = None
@@ -90,8 +91,10 @@ with multi_modal_tab:
             with st.container():
                 ## Create a Variable object for TextGrad
                 question_variable = Variable(question, role_description="question to the LLM", requires_grad=False)
+                ## aggregate the question and image
+                aggregate = autograd.sum([question_variable, image_variable])
                 ## Call the LLM
-                response = autograd.MultimodalLLMCall(engine)([image_variable, question_variable])
+                response = autograd.LLMCall(engine=engine)([question_variable, image_variable])
                 ## Display the response, Large size fonts
                 st.markdown(f"## {response}")
             
