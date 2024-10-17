@@ -1,4 +1,6 @@
-# tech-seminar-final
+# tech-seminar-final (🎇 최종 우승 🎆)
+
+![Me!](./images/prize.png)
 
 Woori FIS Academy Tech Seminar Final
 
